@@ -1,0 +1,27 @@
+class Solution1:
+#I'm going to 
+    step = 0
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        for i in range(self.step+1, len(nums)):
+            result = nums[self.step] + nums[i]
+            if result == target:
+                return [self.step, i]
+        self.step += 1
+        solution = self.twoSum(nums, target)
+        return solution
+		
+#Results:
+#Runtime: 8334 ms, faster than 5.01% of Python3 online submissions for Two Sum.
+#Memory Usage: 24.3 MB, less than 5.00% of Python3 online submissions for Two Sum.
+
+class Solution2:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        for i in range(len(nums)):
+            diff = target - nums[i]
+            sub_array = nums[i+1:]
+            if diff in sub_array:
+                index_of_diff = i + 1 + sub_array.index(diff)
+                return [i, index_of_diff]
+
+#Runtime: 728 ms, faster than 35.39% of Python3 online submissions for Two Sum.
+#Memory Usage: 14.8 MB, less than 92.43% of Python3 online submissions for Two Sum.
