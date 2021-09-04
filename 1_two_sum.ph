@@ -1,6 +1,8 @@
-class Solution1:
-#I'm going to 
-    step = 0
+# 1. Two Sum
+
+#Let's try to solve it with recursive function. 
+class Solution1: 
+    step = 0 #i'm using step as a shift counter for the first index
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         for i in range(self.step+1, len(nums)):
             result = nums[self.step] + nums[i]
@@ -23,5 +25,6 @@ class Solution2:
                 index_of_diff = i + 1 + sub_array.index(diff)
                 return [i, index_of_diff]
 
+#Results:
 #Runtime: 728 ms, faster than 35.39% of Python3 online submissions for Two Sum.
 #Memory Usage: 14.8 MB, less than 92.43% of Python3 online submissions for Two Sum.
