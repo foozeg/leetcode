@@ -54,7 +54,6 @@ class Solution2:
             val3 = l1.val + l2.val + pop
             pop = int(val3/10)
             val3 = val3 % 10
-            #print(l1.val, l2.val)
 
             if first:
                 l3 = ListNode(val3)
@@ -64,9 +63,6 @@ class Solution2:
                 new = ListNode(val3)
                 last.next = new
                 last = new
-                
-                #l3 = ListNode(val3, next=l3)
-                
 
             if l1.next is None and l2.next is None and pop == 0:
                 break
