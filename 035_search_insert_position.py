@@ -51,3 +51,32 @@ class Solution2:
 #Result
 #Runtime: 94 ms, faster than 5.69% of Python3 online submissions for Search Insert Position.
 #Memory Usage: 15.1 MB, less than 22.60% of Python3 online submissions for Search Insert Position.
+
+#after checking others' solutions:
+class Solution3:
+    def searchInsert(self, nums: List[int], target: int) -> int:
+        
+        length = len(nums)
+        
+        if target <= nums[0]:
+            return 0
+        
+        if target == nums[-1]:
+            return length-1
+        
+        if target > nums[-1]:
+            return length
+
+        index = length // 2
+        while True:
+            if target == nums[index]:
+                return index
+            if target > nums[index]:
+                index += 1
+            elif target <= nums[index-1]:
+                index -= 1
+            else:
+                return index
+#Result:
+#Runtime: 59 ms, faster than 29.12% of Python3 online submissions for Search Insert Position.
+#Memory Usage: 14.8 MB, less than 99.06% of Python3 online submissions for Search Insert Position.
