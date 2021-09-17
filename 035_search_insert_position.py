@@ -20,8 +20,6 @@ class Solution:
         index = length // 2
         step = index
         while True:
-            if index+1 == length:
-                return index
             if target > nums[index]:
                 step = (step // 2) + (step % 2)
                 index += step
