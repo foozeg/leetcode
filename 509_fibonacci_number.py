@@ -24,3 +24,16 @@ class Solution2:
 #Result:
 #Runtime: 28 ms, faster than 86.81% of Python3 online submissions for Fibonacci Number.
 #Memory Usage: 14.2 MB, less than 40.34% of Python3 online submissions for Fibonacci Number.
+
+#dynamic programming
+class Solution3:
+    def fib(self, n: int) -> int:
+        a = 0
+        b = 1
+        for _ in range(n):
+            a, b = b, a + b
+        return a
+    
+#Result:
+#Runtime: 32 ms, faster than 69.15% of Python3 online submissions for Fibonacci Number.
+#Memory Usage: 14.3 MB, less than 8.50% of Python3 online submissions for Fibonacci Number.
